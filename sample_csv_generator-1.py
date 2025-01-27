@@ -127,8 +127,8 @@ class EmployeeGenerator:
             second_digit = random.randint(1, 9)
             third_digit = random.choice(['A', 'B', 'C', 'D', 'E', 'F'])
             quarter_type = random.choice(['A', 'B', 'C', 'D'])
-            year = random.randint(1799, 2099)
-            return f"0{second_digit}{third_digit}{quarter_type}{year}"
+            quarter_no = random.randint(1799, 2099)
+            return f"0{second_digit}{third_digit}{quarter_type}{quarter_no}"
         return ""
 
     def generate_employee_data(self, emp_id: int, existing_names: Set[str]) -> Dict[str, Any]:
